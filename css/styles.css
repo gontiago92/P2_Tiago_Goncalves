@@ -222,3 +222,25 @@ aside .hobbies .icons i {
     font-size: 26px;
     color: #FFC107;
 }
+
+/**
+*   Mobile functionality / Responsive design
+*/
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .main header h1 {
+        font-size: 34px;
+    }
+
+    .main .section-title {
+        font-size: 18px;
+    }
+}
