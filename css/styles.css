@@ -3,14 +3,16 @@
 *   Author: Tiago Gonçalves
 */
 
-/*** Fonts ***/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
+/*** Fonts ***/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 * {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -33,26 +35,41 @@ aside {
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     width: 25%;
     min-width: 300px;
+    height: 100vh;
     background: #FFC107;
 }
 
 aside .profile-picture {
     margin: 0;
-    padding: 20px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 25%;
 }
 
-aside .profile-picture img {
+aside .profile-picture .image {
+    margin: 40px;
+    padding: 0;
     width: 200px;
+    height: 200px;
+    background: url('../images/profile_picture.jpg');
+    background-size: 750px;
+    background-position: 60% 40%;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, .1);
+}
+
+
+/*aside .profile-picture img {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 4px solid rgba(0, 0, 0, .10);
-}
+}*/
 
 aside h1 {
     margin: 0;
@@ -229,6 +246,7 @@ aside .hobbies .icons i {
     list-style: none;
 }
 
+
 /**
 *   Mobile functionality / Responsive design
 */
@@ -237,48 +255,38 @@ aside .hobbies .icons i {
     .container {
         flex-direction: column;
     }
-
     aside {
         width: 100%;
+        height: 100%;
     }
-
     .main header h1 {
         font-size: 34px;
     }
-
     .main .section-title {
         font-size: 18px;
     }
 }
 
-
 @media screen and (max-width: 600px) {
     .main header h1 {
         font-size: 26px;
     }
-
-    
     .main .section-title {
         font-size: 14px;
     }
-
     .main .row {
         padding: 0;
         width: 100%;
         flex-direction: column;
     }
-
     .main .row .column:first-of-type {
         margin: 0 0 20px 40px;
         width: 100%;
     }
-
     .main .row .column:last-child {
         margin-left: 40px;
     }
-
     .main .row .column h2 {
         font-size: 16px;
     }
-    
 }
